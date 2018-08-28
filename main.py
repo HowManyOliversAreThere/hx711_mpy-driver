@@ -4,14 +4,11 @@ from hx711 import HX711
 
 freq(160000000)
 
-offset = HX711().value
-print("offset: ", offset)
+my_hx711 = HX711()
+print("HX711 offset: %.1f" % my_hx711.offset)
 
+count = 0
 while True:
-    v = HX711().value
-    if (v == 0): print("Invalid")
-    else:
-        v -= offset
-        if(v>0): print(v)
-        else: print("-%s" % str(v>>1))
-    time.sleep(1)
+    time.sleep(3)
+    count += 1
+    print("HX711 value %i: %.1f" % (count, my_hx711.read()))
