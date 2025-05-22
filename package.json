@@ -1,0 +1,7 @@
+{
+  "urls": [
+    ["hx711.py", "github:HowManyOliversAreThere/hx711_mpy-driver/hx711.py"]
+  ],
+  "version": "1.0.0",
+  "deps": []
+}
